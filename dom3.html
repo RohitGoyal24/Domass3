@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+</head>
+<body>
+<a id="google" target="_self" href="https://www.w3resource.com/">google</a>
+<div id="attrs"></div>
+<button onclick="showAttribue()">Show Attributes Of link</button>
+<button onclick="remove()">Remove Result</button>
+<script>
+    function showAttribue(){
+      var show=document.getElementById("attrs");
+      var elem  = document.getElementById("google"),
+      atributearray = Array.prototype.slice.call(elem.attributes);
+      console.log(atributearray);
+      show.innerText=atributearray;
+    }
+    function remove(){
+        var hide=document.getElementById("attrs");
+        hide.style.display="none";
+    }
+</script>
+</body>
+</html>
